@@ -1,0 +1,77 @@
+
+.blackhole-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: radial-gradient(circle, #01010a 30%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blackhole {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #000 20%, transparent 70%);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+  animation: spin 1.5s linear infinite;
+  overflow: hidden;
+}
+
+.blackhole::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 4px solid #8000ff;
+  border-top: 4px solid #00c3ff;
+  animation: orbit 2s linear infinite;
+  box-shadow: 0 0 20px #00c3ff, 0 0 40px #8000ff;
+}
+
+.blackhole::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(0, 195, 255, 0.07), transparent 80%);
+  top: -80px;
+  left: -80px;
+  z-index: -1;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.loading-text {
+  margin-top: 1.5rem;
+  color: #00c3ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00c3ff;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}

@@ -1,0 +1,42 @@
+.user-profile-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.profile-card {
+  background: rgba(18, 21, 52, 0.8);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #0ff;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.profile-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #7ef9ff;
+}
+
+.profile-card span {
+  color: #0ff;
+}
+
+.profile-card button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  background: #7ef9ff;
+  color: #0a0a23;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.profile-card button:hover {
+  background: #0ff;
+}
